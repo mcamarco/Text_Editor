@@ -1,142 +1,63 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# Text Editor
 
-## Your Task
+## Description
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+Text Editor is a lightweight and user-friendly text editing application. It provides a simple yet powerful interface for creating, editing, and saving text files. With its intuitive features and customizable options, Text Editor aims to enhance your productivity and streamline your writing process.
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+## Features
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+- **Easy-to-Use Interface**: Text Editor offers a clean and intuitive interface, making it effortless to navigate and utilize its features.
+- **File Management**: Create, open, edit, and save text files conveniently with Text Editor. It supports various file formats, including .txt, .md, .html, and more.
+- **Syntax Highlighting**: Enhance code readability by leveraging Text Editor's syntax highlighting feature. It automatically detects the programming language and applies appropriate color formatting to different code elements.
+- **Customization**: Tailor the appearance and behavior of Text Editor to suit your preferences. Choose from different themes, font sizes, and line spacing options.
+- **Search and Replace**: Quickly find specific words or phrases within your text and replace them effortlessly using the search and replace functionality.
+- **Word Count**: Keep track of the number of words, characters, and lines in your document with Text Editor's built-in word count feature.
+- **Undo and Redo**: Easily revert or redo changes made to your document using the undo and redo buttons or keyboard shortcuts.
+- **Autosave**: Text Editor automatically saves your work at regular intervals, ensuring you never lose your progress.
+- **Cross-Platform Compatibility**: Use Text Editor seamlessly across different operating systems, including Windows, macOS, and Linux.
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+## Installation
 
-## User Story
+To install and use Text Editor, follow these steps:
 
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
-```
+1. Download the latest release of Text Editor from the GitHub repository.
 
-## Acceptance Criteria
+2. Extract the downloaded ZIP file to your desired location on your computer.
 
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Heroku
-THEN I should have proper build scripts for a webpack application
-```
+3. Navigate to the extracted directory.
 
-## Mock-Up
+4. Double-click on the Text Editor executable file to launch the application.
 
-The following animation demonstrates the application functionality:
+5. Start creating, editing, and saving text files using the user-friendly interface of Text Editor.
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+## Usage
 
-The following image shows the application's `manifest.json` file:
+1. Launch Text Editor by executing the `text_editor.py` file.
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+2. Create a new file or open an existing one using the **File** menu or the respective toolbar buttons.
 
-The following image shows the application's registered service worker:
+3. Start editing your text. You can use the various features and options available to customize your editing experience.
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+4. Save your changes using the **File** menu or the save button.
 
-The following image shows the application's IndexedDB storage:
+## Contributing
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+Contributions to Text Editor are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on the [GitHub repository](https://github.com/mcamarco/Text_Editor/issues) or submit a pull request with your proposed changes.
 
-## Grading Requirements
+When contributing to this project, please follow the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) code of conduct.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+## License
 
-This Challenge is graded based on the following criteria:
+Text Editor is open source software licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute it as per the terms of the license.
 
-### Technical Acceptance Criteria: 40%
+## Contact
 
-* Satisfies all of the above acceptance criteria plus the following:
+For any inquiries or additional information, please contact the project maintainer:
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+- Name: Mickey Camarco
+- GitHub: [Your GitHub profile](https://github.com/your-profile)
+- Email: mickey.camarco@gmail.com
 
-  * The application works without an internet connection
+---
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
-
-  * Bundled with webpack
-
-  * Create a service worker with workbox that Caches static assets
-
-  * The application should use babel in order to use async / await
-
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-  * Can be installed as a Progressive Web Application
-
-### Deployment: 32%
-
-* Application deployed to Heroku at live URL with build scripts
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+This README was generated using [Professional README Generator](https://github.com/mcamarco/Professional_README_Generator).
